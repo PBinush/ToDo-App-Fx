@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="712.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <JFXTextField layoutX="110.0" layoutY="173.0" prefHeight="26.0" prefWidth="258.0" promptText="username" />
+      <JFXTextField layoutX="110.0" layoutY="237.0" prefHeight="26.0" prefWidth="258.0" promptText="password" />
+   </children>
+</AnchorPane>
