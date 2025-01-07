@@ -2,7 +2,9 @@
 
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -21,11 +23,12 @@
             <Image url="@../../img/main-bg.jpg" />
          </image>
       </ImageView>
-      <TableView fx:id="tblAdd" layoutX="39.0" layoutY="250.0" opacity="0.7" prefHeight="326.0" prefWidth="460.0">
+      <TableView fx:id="tblAdd" layoutX="39.0" layoutY="277.0" opacity="0.7" prefHeight="326.0" prefWidth="460.0">
          <columns>
-            <TableColumn fx:id="colTitle" prefWidth="136.0" text="Title" />
-            <TableColumn fx:id="colDiscription" prefWidth="246.4000244140625" text="Discription" />
-            <TableColumn fx:id="colComplete" prefWidth="81.5999755859375" text="Complete" />
+            <TableColumn fx:id="colTitle" prefWidth="96.0" text="Title" />
+            <TableColumn fx:id="colDescription" prefWidth="140.0" text="Discription" />
+            <TableColumn fx:id="colDate" prefWidth="149.60003662109375" text="Date " />
+            <TableColumn fx:id="colComplete1" prefWidth="68.00006103515625" text="Complete" />
          </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="91.0" text="ToDo">
@@ -54,18 +57,34 @@
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtTitle" layoutX="179.0" layoutY="113.0" prefHeight="26.0" prefWidth="176.0" promptText="Enter Title" />
-      <Button layoutX="364.0" layoutY="179.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: white;" text="Add">
+      <JFXTextField fx:id="txtTitle" layoutX="179.0" layoutY="113.0" prefHeight="26.0" prefWidth="176.0" promptText="Enter Title">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <Button layoutX="376.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: white;" text="Add">
          <font>
-            <Font name="System Italic" size="12.0" />
+            <Font name="System Bold Italic" size="12.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <JFXTextArea fx:id="txtDiscription" layoutX="179.0" layoutY="154.0" prefHeight="50.0" prefWidth="176.0" promptText="Enter Discription" />
+      <JFXTextArea fx:id="txtDescription" layoutX="179.0" layoutY="154.0" prefHeight="50.0" prefWidth="176.0" promptText="Enter Discription">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor></JFXTextArea>
       <ImageView fitHeight="42.0" fitWidth="53.0" layoutX="478.0" layoutY="18.0" onMouseClicked="#btnBackOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../img/black-circle.png" />
          </image>
       </ImageView>
-      <Button layoutX="218.0" layoutY="608.0" mnemonicParsing="false" onAction="#btnCompletedTaskOnAction" style="-fx-background-color: white;" text="Completed Task" />
+      <Button layoutX="215.0" layoutY="630.0" mnemonicParsing="false" onAction="#btnCompletedTaskOnAction" style="-fx-background-color: white;" text="Completed Task">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <DatePicker fx:id="txtDate" layoutX="179.0" layoutY="218.0" prefHeight="26.0" prefWidth="176.0" promptText="Choose Date" style="-fx-background-color: white;" />
    </children>
 </AnchorPane>
